@@ -1,6 +1,7 @@
 ## AnneNjamen_SoftwareIntern
 To validate the implementation of TICKET-101, we need to ensure that the code meets the 
 requirements specified in the ticket description:
+
 1.The decision engine should calculate the maximum loan amount and period based on the provided personal code, loan amount, and loan period.
 2.The loan amount should be determined by the credit modifier derived from the last 
 four digits of the personal code.
