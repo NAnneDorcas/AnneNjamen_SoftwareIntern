@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="ee.taltech.inbankbackend.service.DecisionEngineTest" tests="9" skipped="0" failures="0" errors="0" timestamp="2024-04-21T03:35:59" hostname="LAPTOP-BT5SM3A5" time="0.059">
+  <properties/>
+  <testcase name="testSegment3PersonalCode()" classname="ee.taltech.inbankbackend.service.DecisionEngineTest" time="0.017"/>
+  <testcase name="testInvalidPersonalCode()" classname="ee.taltech.inbankbackend.service.DecisionEngineTest" time="0.005"/>
+  <testcase name="testInvalidLoanAmount()" classname="ee.taltech.inbankbackend.service.DecisionEngineTest" time="0.005"/>
+  <testcase name="testSegment2PersonalCode()" classname="ee.taltech.inbankbackend.service.DecisionEngineTest" time="0.004"/>
+  <testcase name="testFindSuitableLoanPeriod()" classname="ee.taltech.inbankbackend.service.DecisionEngineTest" time="0.003"/>
+  <testcase name="testSegment1PersonalCode()" classname="ee.taltech.inbankbackend.service.DecisionEngineTest" time="0.004"/>
+  <testcase name="testInvalidLoanPeriod()" classname="ee.taltech.inbankbackend.service.DecisionEngineTest" time="0.004"/>
+  <testcase name="testDebtorPersonalCode()" classname="ee.taltech.inbankbackend.service.DecisionEngineTest" time="0.004"/>
+  <testcase name="testNoValidLoanFound()" classname="ee.taltech.inbankbackend.service.DecisionEngineTest" time="0.005"/>
+  <system-out><![CDATA[2024-04-21T05:35:59.424+02:00  INFO 558 --- [    Test worker] e.t.inbankbackend.service.Decision       : Attempting to load client data...
+2024-04-21T05:35:59.426+02:00  INFO 558 --- [    Test worker] e.t.inbankbackend.service.Decision       : Client data loaded successfully.
+2024-04-21T05:35:59.434+02:00  INFO 558 --- [    Test worker] e.t.inbankbackend.service.Decision       : CreditModifier: 1000
+2024-04-21T05:35:59.434+02:00  INFO 558 --- [    Test worker] e.t.inbankbackend.service.Decision       : AgeCheck result: 1
+2024-04-21T05:35:59.440+02:00  INFO 558 --- [    Test worker] e.t.inbankbackend.service.Decision       : Attempting to load client data...
+2024-04-21T05:35:59.442+02:00  INFO 558 --- [    Test worker] e.t.inbankbackend.service.Decision       : Client data loaded successfully.
+2024-04-21T05:35:59.446+02:00  INFO 558 --- [    Test worker] e.t.inbankbackend.service.Decision       : Attempting to load client data...
+2024-04-21T05:35:59.449+02:00  INFO 558 --- [    Test worker] e.t.inbankbackend.service.Decision       : Client data loaded successfully.
+2024-04-21T05:35:59.452+02:00  INFO 558 --- [    Test worker] e.t.inbankbackend.service.Decision       : Attempting to load client data...
+2024-04-21T05:35:59.453+02:00  INFO 558 --- [    Test worker] e.t.inbankbackend.service.Decision       : Client data loaded successfully.
+2024-04-21T05:35:59.455+02:00  INFO 558 --- [    Test worker] e.t.inbankbackend.service.Decision       : CreditModifier: 300
+2024-04-21T05:35:59.455+02:00  INFO 558 --- [    Test worker] e.t.inbankbackend.service.Decision       : AgeCheck result: 1
+2024-04-21T05:35:59.457+02:00  INFO 558 --- [    Test worker] e.t.inbankbackend.service.Decision       : Attempting to load client data...
+2024-04-21T05:35:59.458+02:00  INFO 558 --- [    Test worker] e.t.inbankbackend.service.Decision       : Client data loaded successfully.
+2024-04-21T05:35:59.459+02:00  INFO 558 --- [    Test worker] e.t.inbankbackend.service.Decision       : CreditModifier: 300
+2024-04-21T05:35:59.459+02:00  INFO 558 --- [    Test worker] e.t.inbankbackend.service.Decision       : AgeCheck result: 1
+2024-04-21T05:35:59.461+02:00  INFO 558 --- [    Test worker] e.t.inbankbackend.service.Decision       : Attempting to load client data...
+2024-04-21T05:35:59.463+02:00  INFO 558 --- [    Test worker] e.t.inbankbackend.service.Decision       : Client data loaded successfully.
+2024-04-21T05:35:59.463+02:00  INFO 558 --- [    Test worker] e.t.inbankbackend.service.Decision       : CreditModifier: 100
+2024-04-21T05:35:59.464+02:00  INFO 558 --- [    Test worker] e.t.inbankbackend.service.Decision       : AgeCheck result: 1
+2024-04-21T05:35:59.466+02:00  INFO 558 --- [    Test worker] e.t.inbankbackend.service.Decision       : Attempting to load client data...
+2024-04-21T05:35:59.467+02:00  INFO 558 --- [    Test worker] e.t.inbankbackend.service.Decision       : Client data loaded successfully.
+2024-04-21T05:35:59.471+02:00  INFO 558 --- [    Test worker] e.t.inbankbackend.service.Decision       : Attempting to load client data...
+2024-04-21T05:35:59.473+02:00  INFO 558 --- [    Test worker] e.t.inbankbackend.service.Decision       : Client data loaded successfully.
+2024-04-21T05:35:59.474+02:00  INFO 558 --- [    Test worker] e.t.inbankbackend.service.Decision       : CreditModifier: 0
+2024-04-21T05:35:59.474+02:00  INFO 558 --- [    Test worker] e.t.inbankbackend.service.Decision       : AgeCheck result: 1
+2024-04-21T05:35:59.476+02:00  INFO 558 --- [    Test worker] e.t.inbankbackend.service.Decision       : Attempting to load client data...
+2024-04-21T05:35:59.478+02:00  INFO 558 --- [    Test worker] e.t.inbankbackend.service.Decision       : Client data loaded successfully.
+2024-04-21T05:35:59.480+02:00  INFO 558 --- [    Test worker] e.t.inbankbackend.service.Decision       : CreditModifier: 0
+2024-04-21T05:35:59.480+02:00  INFO 558 --- [    Test worker] e.t.inbankbackend.service.Decision       : AgeCheck result: 1
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

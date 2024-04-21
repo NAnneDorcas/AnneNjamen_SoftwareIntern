@@ -1,0 +1,19 @@
+{
+  "Clients_Information" : [ {
+    "Personal_ID" : "49002010965",
+    "Age" : "",
+    "CM" : 0
+  }, {
+    "Personal_ID" : "49002010976",
+    "Age" : "",
+    "CM" : 100
+  }, {
+    "Personal_ID" : "49002010987",
+    "Age" : "",
+    "CM" : 300
+  }, {
+    "Personal_ID" : "49002010998",
+    "Age" : "12.03.2001",
+    "CM" : 1000
+  } ]
+}
