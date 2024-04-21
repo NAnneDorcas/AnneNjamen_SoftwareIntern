@@ -1,39 +1,51 @@
-## AnneNjamen_SoftwareIntern
-To validate the implementation of TICKET-101, we need to ensure that the code meets the 
-requirements specified in the ticket description:
+# Project Documentation
 
-1.The decision engine should calculate the maximum loan amount and period based on the provided personal code, loan amount, and loan period.
+## Ticket Review
 
-2.The loan amount should be determined by the credit modifier derived from the last 
-four digits of the personal code.
+### TICKET-101: Decision Engine Implementation Review
 
-3. The loan period must be between 12 and 60 months, and the loan amount must be 
-between ?2000 and ?10000.
+To ensure the successful implementation of TICKET-101, we reviewed the code against the requirements specified in the ticket description. Here are the findings:
 
-4. The credit score calculation should adhere to the specified algorithm, where the 
-credit modifier is divided by the loan amount and multiplied by the loan period.
+#### Requirements and Implementation:
+1. **Decision Engine Functionality**:
+   - Calculates the maximum loan amount and period based on personal code, loan amount, and loan period.
+   - Determines the loan amount using the credit modifier derived from the last four digits of the personal code.
+   - Ensures that the loan period is between 12 and 60 months and that the loan amount is between €2000 and €10000.
+   - Adheres to the credit score calculation algorithm specified.
+   - Blocks loan approval if the credit score is less than 1.
 
-5. If the credit score is less than 1, the loan should not be approved.
+2. **Current Implementation**:
+   - The `calculateApprovedLoan` method successfully handles the calculation logic based on the inputs.
+   - Input validation is robust, verifying the validity of the personal code and the specified ranges for the loan amount and period.
+   - The code structure is clear, and the logical flow is well maintained.
 
-Based on the provided code, the implementation appears to fulfill these requirements:
+3. **Identified Issues**:
+   - The credit modifier is incorrectly derived from the personal code instead of fetching it from InBank's client data database.
 
- - The calculateApprovedLoan method takes in the personal code, loan amount, and 
-loan period, and calculates the maximum loan amount based on the credit modifier.
-- Input validation is performed to ensure that the personal code is valid and that the 
-loan amount and period are within the specified ranges.
-- The credit modifier is correctly determined based on the last four digits of the 
-personal code.
-- The loan amount calculation considers both the credit modifier and the loan period.
-- The code handles scenarios where the calculated loan amount is below the 
-minimum threshold.
+4. **Recommendations for Improvement**:
+   - Implement fetching of the credit modifier directly from the bank's database to ensure accuracy.
+   - Consider refinements to adhere to SOLID principles for better code maintainability.
+   - Explore options for recalibrating the loan period to provide additional benefits to users.
+   - Enhance the decision engine by allowing refinancing options when the loan amount exceeds the maximum threshold.
 
-Overall, the intern has implemented the basic functionality of the decision engine 
-effectively. The code structure is clear, and the logic appears to be sound.
-However, there are areas for improvement to adhere to SOLID principles and enhance 
-maintainability:
+### TICKET-102: Age Constraint Implementation
 
- - Assume That CS=1
- - The program could also consider a recalibration of the loan period in order to provide 
-the user that added advantage
- - We can improve the decision engine by refinancing the loan period when the loan 
-amount is above the maximum loan amoun
+#### Frontend Changes:
+- Replaced the slider system with a textbox for both the Loan Amount and Loan Period.
+- Added a list tile to handle the date of birth input.
+- Updated `api_service` to parse the date of birth to the backend.
+- Modified existing tests to accommodate the new changes and ensure they pass.
+
+#### Backend Changes:
+- Introduced `InvalidAgeException` in exceptions for handling age-related errors.
+- Implemented `AgeChecker` in configs to verify client's age based on the provided data.
+- Added `ClientInfo` class in configs to manage client data.
+- Updated `DecisionEngine.java` to:
+  - Load client data from `main/resources/data/client_data.json`.
+  - Support the AgeChecker feature.
+  - Enhance the `calculateApprovedLoan` function to accommodate new requirements.
+- Modified `DecisionEngineController.java` and `DecisionRequest.java` to integrate the new age constraint checks.
+
+## Conclusion
+
+The implementations for both TICKET-101 and TICKET-102 were reviewed. The code meets most of the specified requirements with some areas noted for improvement. The team is encouraged to address these areas in future updates to enhance functionality and maintainability.
